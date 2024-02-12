@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="cari_rumah"
+        android:label="DimHouse"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
