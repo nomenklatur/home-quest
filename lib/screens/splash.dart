@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:cari_rumah/const/styles.dart";
+import "package:cari_rumah/screens/home.dart";
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}):super(key: key);
@@ -47,7 +48,14 @@ class SplashScreen extends StatelessWidget {
                     height: 50,
                     width: 210,
                     child: ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomeScreen()
+                          )
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(AppColors.primary),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
