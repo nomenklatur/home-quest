@@ -63,6 +63,11 @@ flutter:
   assets:
     - images/logo.png
     - images/splash_image.png
+    - images/icon_star_solid.png
+    - images/cities/jakarta.jpg
+    - images/cities/yogyakarta.jpg
+    - images/cities/bandung.jpg
+    - images/cities/medan.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
