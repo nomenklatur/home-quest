@@ -14,4 +14,5 @@ class AppFonts {
   static final light = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: Colors.white);
   static final secondary = GoogleFonts.poppins(fontWeight: FontWeight.w300, color: AppColors.secondary);
   static final primary = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: AppColors.primary);
+  static final regular = GoogleFonts.poppins(fontWeight: FontWeight.w400, color: Colors.black);
 }
