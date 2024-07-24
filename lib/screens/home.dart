@@ -1,5 +1,6 @@
 import 'package:cari_rumah/const/styles.dart';
 import 'package:cari_rumah/widgets/city_card.dart';
+import 'package:cari_rumah/widgets/space_card.dart';
 import 'package:flutter/material.dart';
 import 'package:cari_rumah/dummies/cities.dart';
 
@@ -10,6 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        bottom: false,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 24),
           child: ListView(
@@ -42,6 +44,22 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                 ),
+              ),
+              const SizedBox(height: 30),
+              Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: Text('Rekomendasi Cozy', style: AppFonts.regular.copyWith(fontSize: 16)),
+              ),
+              const SizedBox(height: 16),
+              Column(
+                children: [
+                  SpaceCard(),
+                  const SizedBox(height: 30,),
+                  SpaceCard(),
+                  const SizedBox(height: 30,),
+                  SpaceCard(),
+                  const SizedBox(height: 30,)
+                ],
               )
             ],
           ),
