@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:cari_rumah/const/styles.dart';
+import 'package:cari_rumah/models/space.dart';
 
 class SpaceCard extends StatelessWidget {
+  final Space space;
+
+  const SpaceCard({Key? key, required this.space}):super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -11,10 +16,9 @@ class SpaceCard extends StatelessWidget {
           child: Container(
             width: 130,
             height: 110,
-            decoration: BoxDecoration(color: Colors.green),
             child: Stack(
               children: [
-                Image.asset('images/spaces/space1.png', width: 130, height: 110, fit: BoxFit.cover),
+                Image.asset(space.imageUrl, width: 130, height: 110, fit: BoxFit.cover),
                 Align(
                     alignment: Alignment.topRight,
                     child: Container(
@@ -32,7 +36,7 @@ class SpaceCard extends StatelessWidget {
                         children: [
                           Image.asset('images/icon_star_solid.png', width: 22, height: 22),
                           Text(
-                            '4/5',
+                            '${space.rating}/5',
                             style: AppFonts.light.copyWith(
                               fontSize: 13,
                             )
@@ -50,21 +54,21 @@ class SpaceCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Kuretakeso Hott',
+              space.name,
               style: AppFonts.dark.copyWith(fontSize:  18),
             ),
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             Text.rich(
               TextSpan(
-                text: 'Rp9.250.000',
+                text: space.price,
                 style: AppFonts.primary.copyWith(fontSize: 16),
                 children: [
-                  TextSpan(text: ' / month', style: AppFonts.secondary.copyWith(fontSize: 16))
+                  TextSpan(text: ' / bulan', style: AppFonts.secondary.copyWith(fontSize: 16))
                 ]
               )
             ),
             const SizedBox(height: 16,),
-            Text('Sunggal, Medan', style: AppFonts.secondary.copyWith(fontSize: 14),)
+            Text('${space.region}, ${space.city}', style: AppFonts.secondary.copyWith(fontSize: 14),)
           ],
         )
       ],
