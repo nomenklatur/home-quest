@@ -1,9 +1,11 @@
 import 'package:cari_rumah/const/styles.dart';
 import 'package:cari_rumah/widgets/city_card.dart';
 import 'package:cari_rumah/widgets/space_card.dart';
+import 'package:cari_rumah/widgets/tips_card.dart';
 import 'package:flutter/material.dart';
 import 'package:cari_rumah/dummies/cities.dart';
 import 'package:cari_rumah/dummies/spaces.dart';
+import 'package:cari_rumah/dummies/tips.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}):super(key: key);
@@ -62,6 +64,22 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(height: 30,),
                     SpaceCard(space: dummiesSpace[2],),
                     const SizedBox(height: 30,)
+                  ],
+                ),
+              ),
+              const SizedBox(height: 30),
+              Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: Text('Tips & Petunjuk', style: AppFonts.regular.copyWith(fontSize: 16)),
+              ),
+              const SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  children: [
+                    TipsCard(tips: dummiesTips[0]),
+                    const SizedBox(height: 20),
+                    TipsCard(tips: dummiesTips[1]),
                   ],
                 ),
               )
